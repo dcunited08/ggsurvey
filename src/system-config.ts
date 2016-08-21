@@ -20,6 +20,7 @@ const barrels: string[] = [
   '@angular/compiler',
   '@angular/http',
   '@angular/router',
+  '@angular/forms',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
 
@@ -29,6 +30,9 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/test-form1',
+  'app/hero-form/hero-form',
+  'app/hero-form',
   /** @cli-barrel */
 ];
 
