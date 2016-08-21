@@ -1,0 +1,10 @@
+<div class="container">
+  <h4>What type of shoes are you looking for?</h4>
+  <form>
+    <div class="form-group">
+      <div class="btn-group-vertical justify" role="group">
+        <button *ngFor="let o of options" (click)="onClick(o)" type="button" class="btn btn-default">{{o}}</button>
+      </div>
+    </div>
+  </form>
+</div>
