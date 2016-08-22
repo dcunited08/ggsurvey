@@ -1,0 +1,66 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/6.3.1/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.0.2
+[debug] Platform:     darwin
+[debug] Node Version: v6.3.1
+[debug] Time:         Mon Aug 22 2016 19:24:22 GMT-0400 (EDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gogofootcare-5e6b0 
+[error] 
+[error] Error: An unknown error occurred. Please contact support.
+[debug] Error Context: {
+  "requestOptions": {
+    "method": "GET",
+    "json": true,
+    "url": "https://admin.firebase.com/v1/projects/gogofootcare-5e6b0",
+    "headers": {
+      "authorization": "Bearer ya29.CjNHAxoWHqeYOw2CsJnYRE1ojpGts2jpdaM82ter6e2mm4X2M2tePCiJf8AdC-3g-v7WMx8"
+    }
+  },
+  "body": {
+    "error": {
+      "code": "UNKNOWN_ERROR",
+      "message": "An unknown error occurred. Please contact support."
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": "UNKNOWN_ERROR",
+        "message": "An unknown error occurred. Please contact support."
+      }
+    },
+    "headers": {
+      "server": "nginx",
+      "date": "Mon, 22 Aug 2016 23:24:22 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "97",
+      "connection": "close",
+      "x-content-type-options": "nosniff"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "admin.firebase.com",
+        "port": 443,
+        "hostname": "admin.firebase.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1/projects/gogofootcare-5e6b0",
+        "path": "/v1/projects/gogofootcare-5e6b0",
+        "href": "https://admin.firebase.com/v1/projects/gogofootcare-5e6b0"
+      },
+      "method": "GET",
+      "headers": {
+        "authorization": "Bearer ya29.CjNHAxoWHqeYOw2CsJnYRE1ojpGts2jpdaM82ter6e2mm4X2M2tePCiJf8AdC-3g-v7WMx8",
+        "accept": "application/json"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="container">
+    <h4>{{question.text}}</h4>
+    <form>
+        <div class="form-group">
+            <div class="btn-group-vertical justify" role="group">
+                <button *ngFor="let o of question.options" (click)="onClick(o)" type="button" class="btn btn-default">{{o.text}}</button>
+            </div>
+        </div>
+    </form>
+</div>

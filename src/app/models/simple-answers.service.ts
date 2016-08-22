@@ -14,4 +14,8 @@ export class SimpleAnswersService {
         this.answers[key] = value;
     }
 
+    reset(){
+        this.answers = {};
+    }
+
 }

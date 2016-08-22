@@ -36,6 +36,7 @@ const barrels: string[] = [
   'app/forms/looking-for-question',
   'app/forms/istep-question',
   'app/forms/arch-type-question',
+  'app/ggstart',
   /** @cli-barrel */
 ];
 

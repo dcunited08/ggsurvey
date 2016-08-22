@@ -3,11 +3,11 @@
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { addProviders, async, inject } from '@angular/core/testing';
-import { ArchTypeQuestionComponent } from './arch-type-question.component';
+import { GGFormComponent } from './ggform.component';
 
-describe('Component: ArchTypeQuestion', () => {
+describe('Component: GGForm', () => {
   it('should create an instance', () => {
-    // let component = new ArchTypeQuestionComponent();
+    // let component = new GGFormComponent();
     // expect(component).toBeTruthy();
   });
 });

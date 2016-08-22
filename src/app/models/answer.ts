@@ -1,5 +1,6 @@
 export class Answer {
-  id: Number;
-  text: String;
-  question: Number;
+    id: Number;
+    text: String;
+    question: Number;
+    // nextQuestion?: any;
 }

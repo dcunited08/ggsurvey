@@ -2,6 +2,9 @@ import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 import {HeroFormComponent} from './hero-form/hero-form.component';
 import {SimpleAnswersService} from "./models/simple-answers.service";
+import {GGFormComponent} from "./ggform/ggform.component";
+import {Question} from "./models/question";
+import {QuestionsManagerService} from "./models/questions-manager.service";
 
 
 @Component({
@@ -10,7 +13,7 @@ import {SimpleAnswersService} from "./models/simple-answers.service";
     templateUrl: 'gg-survey.component.html',
     styleUrls: ['gg-survey.component.css'],
     directives: [ROUTER_DIRECTIVES, HeroFormComponent],
-    providers: [SimpleAnswersService]
+    providers: [SimpleAnswersService, QuestionsManagerService]
 })
 export class GgSurveyAppComponent {
 
