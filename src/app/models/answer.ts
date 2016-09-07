@@ -2,5 +2,5 @@ export class Answer {
     id: Number;
     text: String;
     question: Number;
-    // nextQuestion?: any;
+    nextQuestion?: any;
 }

@@ -5,6 +5,7 @@ import {SimpleAnswersService} from "./models/simple-answers.service";
 import {GGFormComponent} from "./ggform/ggform.component";
 import {Question} from "./models/question";
 import {QuestionsManagerService} from "./models/questions-manager.service";
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 
 @Component({
@@ -17,7 +18,12 @@ import {QuestionsManagerService} from "./models/questions-manager.service";
 })
 export class GgSurveyAppComponent {
 
-    constructor(protected simpleAnswers: SimpleAnswersService) {
+    items: FirebaseListObservable<any[]>;
+    constructor(
+        protected simpleAnswers: SimpleAnswersService,
+        af: AngularFire) {
+
+        this.items = af.database.list('items');
 
     }
 

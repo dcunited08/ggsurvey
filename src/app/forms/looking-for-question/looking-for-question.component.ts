@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SimpleAnswersService} from "../../models/simple-answers.service";
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import { Router} from '@angular/router';
 import {SimpleQuestion} from "../../models/simple-question";
 
 
