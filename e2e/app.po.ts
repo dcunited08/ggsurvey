@@ -1,9 +1,11 @@
+import { browser, element, by } from 'protractor/globals';
+
 export class GgSurveyPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('gg-survey-app h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }
