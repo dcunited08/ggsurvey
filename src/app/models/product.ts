@@ -4,5 +4,4 @@ export class Product {
     id: Number;
     text: String;
     type: ProductType;
-    // nextQuestion?: any;
 }

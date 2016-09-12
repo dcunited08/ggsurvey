@@ -16,6 +16,8 @@ import {HeroFormComponent} from "./hero-form/hero-form.component";
 import {GGFormComponent} from "./ggform/ggform.component";
 import {QuestionsManagerService} from "./models/questions-manager.service";
 import { GGResultsComponent } from './ggresults/ggresults.component';
+import {CookiesService} from "./models/cookies.service";
+import {ProductsManagerService} from "./models/products-manager.service";
 
 // Must export the config
 export const firebaseConfig = {
@@ -44,7 +46,9 @@ export const firebaseConfig = {
     providers: [
         SimpleAnswersService,
         appRoutingProviders,
-        QuestionsManagerService
+        QuestionsManagerService,
+        CookiesService,
+        ProductsManagerService
     ],
     bootstrap: [AppComponent]
 })

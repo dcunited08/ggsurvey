@@ -1,4 +1,14 @@
 <p>
   ggresults works!
+    <br />
     {{SimpleAnswers}}
+    <br />
+    {{UUID}}
+    <br />
+    {{products}}
 </p>
+
+<ul class="list-group">
+    <li *ngFor="let o of products" class="list-group-item">{{o.id}}: {{o.text}} -- {{o.rating}} points</li>
+
+</ul>

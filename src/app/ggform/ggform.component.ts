@@ -4,7 +4,6 @@ import {SimpleAnswersService} from "../models/simple-answers.service";
 import {QuestionsManagerService} from "../models/questions-manager.service";
 import {Subscription} from "rxjs";
 import {Question} from "../models/question";
-import {AngularFire} from "angularfire2";
 import {Questiontypes} from "../models/questiontypes.enum";
 
 @Component({
@@ -24,8 +23,8 @@ export class GGFormComponent implements OnInit {
                 protected router: Router,
                 protected questions: QuestionsManagerService,
                 private route: ActivatedRoute,
-                protected af: AngularFire
     ) {
+
     }
 
     ngOnInit() {
@@ -39,11 +38,6 @@ export class GGFormComponent implements OnInit {
 
     onClick(option) {
         this.simpleAnswers.save(this.questionId, option);
-
-        const relative = this.af.database.object('/item');
-        let obj = {};
-        obj[this.simpleAnswers.uuid] = this.simpleAnswers.answers;
-        relative.update(obj);
 
         let id = (option.nextQuestion != undefined) ? option.nextQuestion : this.question.nextQuestion;
         this.router.navigate(['ggform', id]);

@@ -10,11 +10,37 @@ export const QUESTIONS: Question[] = [
         id: 1,
         text: 'How are you today? What type of shoes are you looking for?',
         options: [
-            {id: 501, text: "Sandals"},
-            {id: 502, text: "Athletic"},
+            {
+                id: 501,
+                text: "Sandals",
+                product: {
+                    id: 1,
+                    rating: 2
+                }
+            },
+            {
+                id: 502,
+                text: "Athletic",
+                product: {
+                    id: 2,
+                    rating: 2
+                }
+            },
             {id: 503, text: "Kids"},
-            {id: 504, text: "Casual"},
-            {id: 505, text: "Work Shoes"},
+            {
+                id: 504, text: "Casual",
+                product: {
+                    id: 3,
+                    rating: 2
+                }
+            },
+            {
+                id: 505, text: "Work Shoes",
+                product: {
+                    id: 4,
+                    rating: 2
+                }
+            },
             {
                 id: 506,
                 text: "Something Else",
@@ -115,10 +141,34 @@ export const QUESTIONS: Question[] = [
     {
         id: 9, text: 'What type of socks do you like? (mark all that apply)',
         options: [
-            {id: 901, text: "Loose socks"},
-            {id: 902, text: "Tight socks"},
-            {id: 903, text: "Thick socks"},
-            {id: 904, text: "Thin socks"},
+            {
+                id: 901, text: "Loose socks",
+                product: {
+                    id: 5,
+                    rating: 2
+                }
+            },
+            {
+                id: 902, text: "Tight socks",
+                product: {
+                    id: 6,
+                    rating: 2
+                }
+            },
+            {
+                id: 903, text: "Thick socks",
+                product: {
+                    id: 7,
+                    rating: 2
+                }
+            },
+            {
+                id: 904, text: "Thin socks",
+                product: {
+                    id: 8,
+                    rating: 2
+                }
+            },
             {id: 905, text: "Low cut"},
             {id: 906, text: "High cut"}
         ],
@@ -129,10 +179,26 @@ export const QUESTIONS: Question[] = [
         id: 10,
         text: 'What are the top two types of shoes you wear most. Get the shoes that they came for and bring out the second type they wear most as well?',
         options: [
-            {id: 1001, text: "Athletic"},
-            {id: 1002, text: "Heels"},
-            {id: 1003, text: "Dress Casual"},
-            {id: 1004, text: "Flip-flops"},
+            {id: 1001, text: "Athletic",
+                product: {
+                    id: 1,
+                    rating: 1
+                }},
+            {id: 1002, text: "Heels",
+                product: {
+                    id: 2,
+                    rating: 1
+                }},
+            {id: 1003, text: "Dress Casual",
+                product: {
+                    id: 3,
+                    rating: 1
+                }},
+            {id: 1004, text: "Flip-flops",
+                product: {
+                    id: 4,
+                    rating: 1
+                }},
             {id: 1005, text: "Sandals"},
             {id: 1006, text: "Clogs"},
             {id: 1006, text: "Boots"}
@@ -237,35 +303,35 @@ export const QUESTIONS: Question[] = [
         id: 19,
         text: 'What size shoe did you measure for?',
         options: [
-            {id:1901, text:"Women’s 5"},
-            {id:1902, text:"Women’s 5.5"},
-            {id:1903, text:"Women’s 6"},
-            {id:1904, text:"Women’s 6.5"},
-            {id:1905, text:"Women’s 7"},
-            {id:1906, text:"Women’s 7.5"},
-            {id:1907, text:"Women’s 8"},
-            {id:1908, text:"Women’s 8.5"},
-            {id:1909, text:"Women’s 9"},
-            {id:1910, text:"Women’s 9.5"},
-            {id:1911, text:"Women’s 10"},
-            {id:1912, text:"Women’s 10.5"},
-            {id:1913, text:"Women’s 11"},
-            {id:1914, text:"Women’s 12"},
-            {id:1915, text:"Men’s 7"},
-            {id:1916, text:"Men’s 7.5"},
-            {id:1917, text:"Men’s 8"},
-            {id:1918, text:"Men’s 8.5"},
-            {id:1919, text:"Men’s 9"},
-            {id:1920, text:"Men’s 9.5"},
-            {id:1921, text:"Men’s 10"},
-            {id:1922, text:"Men’s 10.5"},
-            {id:1923, text:"Men’s 11"},
-            {id:1924, text:"Men’s 11.5"},
-            {id:1925, text:"Men’s 12"},
-            {id:1926, text:"Men’s 12.5"},
-            {id:1927, text:"Men’s 13"},
-            {id:1928, text:"Men’s 14"},
-            {id:1929, text:"Men’s 15"}
+            {id: 1901, text: "Women’s 5"},
+            {id: 1902, text: "Women’s 5.5"},
+            {id: 1903, text: "Women’s 6"},
+            {id: 1904, text: "Women’s 6.5"},
+            {id: 1905, text: "Women’s 7"},
+            {id: 1906, text: "Women’s 7.5"},
+            {id: 1907, text: "Women’s 8"},
+            {id: 1908, text: "Women’s 8.5"},
+            {id: 1909, text: "Women’s 9"},
+            {id: 1910, text: "Women’s 9.5"},
+            {id: 1911, text: "Women’s 10"},
+            {id: 1912, text: "Women’s 10.5"},
+            {id: 1913, text: "Women’s 11"},
+            {id: 1914, text: "Women’s 12"},
+            {id: 1915, text: "Men’s 7"},
+            {id: 1916, text: "Men’s 7.5"},
+            {id: 1917, text: "Men’s 8"},
+            {id: 1918, text: "Men’s 8.5"},
+            {id: 1919, text: "Men’s 9"},
+            {id: 1920, text: "Men’s 9.5"},
+            {id: 1921, text: "Men’s 10"},
+            {id: 1922, text: "Men’s 10.5"},
+            {id: 1923, text: "Men’s 11"},
+            {id: 1924, text: "Men’s 11.5"},
+            {id: 1925, text: "Men’s 12"},
+            {id: 1926, text: "Men’s 12.5"},
+            {id: 1927, text: "Men’s 13"},
+            {id: 1928, text: "Men’s 14"},
+            {id: 1929, text: "Men’s 15"}
         ],
         nextQuestion: 20,
         type: Questiontypes.SingleSelect
