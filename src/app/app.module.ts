@@ -4,10 +4,18 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
+import {
+    routing,
+    appRoutingProviders
+} from './app.routing';
 import {AngularFireModule} from 'angularfire2';
 
-// import { routing, appRoutingProviders } from './app.routing';
 import {GgstartComponent} from "./ggstart/ggstart.component";
+import {SimpleAnswersService} from "./models/simple-answers.service";
+import {HeroFormComponent} from "./hero-form/hero-form.component";
+import {GGFormComponent} from "./ggform/ggform.component";
+import {QuestionsManagerService} from "./models/questions-manager.service";
+import { GGResultsComponent } from './ggresults/ggresults.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -20,7 +28,10 @@ export const firebaseConfig = {
 @NgModule({
     declarations: [
         AppComponent,
-        // GgstartComponent
+        GgstartComponent,
+        HeroFormComponent,
+        GGFormComponent,
+        GGResultsComponent
 
     ],
     imports: [
@@ -28,9 +39,13 @@ export const firebaseConfig = {
         FormsModule,
         HttpModule,
         AngularFireModule.initializeApp(firebaseConfig),
-        // routing
+        routing
     ],
-    providers: [],
+    providers: [
+        SimpleAnswersService,
+        appRoutingProviders,
+        QuestionsManagerService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

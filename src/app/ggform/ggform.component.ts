@@ -8,10 +8,11 @@ import {AngularFire} from "angularfire2";
 import {Questiontypes} from "../models/questiontypes.enum";
 
 @Component({
-    moduleId: module.id,
+
     selector: 'app-ggform',
     templateUrl: 'ggform.component.html',
-    styleUrls: ['ggform.component.css']
+    styleUrls: ['ggform.component.css'],
+    // providers: [Qu]
 })
 export class GGFormComponent implements OnInit {
 
@@ -23,7 +24,8 @@ export class GGFormComponent implements OnInit {
                 protected router: Router,
                 protected questions: QuestionsManagerService,
                 private route: ActivatedRoute,
-                protected af: AngularFire) {
+                protected af: AngularFire
+    ) {
     }
 
     ngOnInit() {

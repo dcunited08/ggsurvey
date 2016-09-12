@@ -12,7 +12,6 @@ export class Question {
     options: any;
     nextQuestion: any;
     type: Questiontypes;
-    // private answers: [Answer] = null;
 
     constructor() {
         // this.answers = [new Answer()];

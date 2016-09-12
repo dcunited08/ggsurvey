@@ -5,7 +5,7 @@ import {SimpleQuestion} from "../../models/simple-question";
 
 
 @Component({
-    moduleId: module.id,
+
     selector: 'app-looking-for-question',
     templateUrl: 'looking-for-question.component.html',
     styleUrls: ['looking-for-question.component.css']

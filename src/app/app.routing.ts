@@ -8,14 +8,24 @@ import {ArchTypeQuestionComponent} from "./forms/arch-type-question/arch-type-qu
 import {GGFormComponent} from "./ggform/ggform.component";
 import {GgstartComponent} from "./ggstart/ggstart.component";
 import {ModuleWithProviders} from "@angular/core";
+import {GGResultsComponent} from "./ggresults/ggresults.component";
 
+
+// const appRoutes: Routes = [
+//   // { path: 'heroes', component: HeroFormComponent },
+//   { path: '', component: GgstartComponent },
+//   // { path: 'ggform', component: GGFormComponent },
+//   // { path: 'ggform/:id', component: GGFormComponent },
+//   // { path: '**', component: PageNotFoundComponent }
+// ];
 
 const appRoutes: Routes = [
-  // { path: 'heroes', component: HeroFormComponent },
-  { path: '', component: GgstartComponent },
-  // { path: 'ggform', component: GGFormComponent },
-  // { path: 'ggform/:id', component: GGFormComponent },
-  // { path: '**', component: PageNotFoundComponent }
+    { path: 'hero', component: HeroFormComponent },
+    { path: '', component: GgstartComponent },
+    { path: 'ggform', component: GGFormComponent },
+    { path: 'ggresults', component: GGResultsComponent },
+    { path: 'ggform/:id', component: GGFormComponent },
+    // { path: '**', component: PageNotFoundComponent }
 ];
 
 export const appRoutingProviders: any[] = [

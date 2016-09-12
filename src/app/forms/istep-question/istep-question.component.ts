@@ -3,7 +3,7 @@ import {Router} from "@angular/router";
 import {SimpleAnswersService} from "../../models/simple-answers.service";
 
 @Component({
-  moduleId: module.id,
+
   selector: 'app-istep-question',
   templateUrl: 'istep-question.component.html',
   styleUrls: ['istep-question.component.css']

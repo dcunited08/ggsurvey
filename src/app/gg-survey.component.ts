@@ -11,7 +11,7 @@ import { routing,
 
 
 @Component({
-    moduleId: module.id,
+
     selector: 'gg-survey-app',
     templateUrl: 'gg-survey.component.html',
     styleUrls: ['gg-survey.component.css'],

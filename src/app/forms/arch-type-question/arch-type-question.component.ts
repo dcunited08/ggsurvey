@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 import {SimpleQuestion} from "../../models/simple-question";
 
 @Component({
-  moduleId: module.id,
+
   selector: 'app-arch-type-question',
   templateUrl: 'arch-type-question.component.html',
   styleUrls: ['arch-type-question.component.css']
