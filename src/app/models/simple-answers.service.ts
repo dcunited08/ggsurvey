@@ -37,6 +37,7 @@ export class SimpleAnswersService {
     }
 
     load(){
+
         const key = '/item';
         this.af.database.object(key)
             .subscribe((asdf) => {
@@ -50,7 +51,7 @@ export class SimpleAnswersService {
         const relative = this.af.database.object('/item');
         let obj = {};
         obj[this.uuid] = this.answers;
-        console.log(obj);
+        // console.log(obj);
         relative.update(obj);
     }
 

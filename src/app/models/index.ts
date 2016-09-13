@@ -6,5 +6,4 @@
 export * from './questiontypes.enum'
 export * from './question'
 export * from './answer'
-// export * from './simple-question'
 export * from './simple-answers.service'

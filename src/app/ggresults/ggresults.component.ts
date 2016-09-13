@@ -33,23 +33,12 @@ export class GGResultsComponent implements OnInit {
 
     determineProducts() {
 
-
-
         let p1 = _.mapValues(this.simpleAnswers.answers, 'product');
         let p2 = _.groupBy(p1, 'id');
+        delete p2['undefined'];
+
         let p3 = _.mapValues(p2, (p) => {
-            console.log(p);
-            if(_.isUndefined(p[0])){
-                return false;
-            }
-
-            let num = 0;
-            for (let i of p) {
-                console.log(i, i.rating);
-                num = num + i.rating;
-            }
-
-            return num;
+            return _.sumBy(p, 'rating');
         });
 
         let products = this.productMgr.get();
@@ -57,7 +46,6 @@ export class GGResultsComponent implements OnInit {
            if(p3[product.id]){
                product['rating'] = p3[product.id];
            }
-
            return product;
         });
 
@@ -66,8 +54,6 @@ export class GGResultsComponent implements OnInit {
         let products3 = _.map(products2, (typeProducts) => {
             return _.maxBy(typeProducts, 'rating');
         });
-
-        console.log(products2);
 
         return (products3.length)? products3 : [];
     }

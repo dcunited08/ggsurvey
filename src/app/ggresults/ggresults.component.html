@@ -1,14 +1,15 @@
-<p>
-  ggresults works!
-    <br />
-    {{SimpleAnswers}}
-    <br />
-    {{UUID}}
-    <br />
-    {{products}}
-</p>
+<!--<p>-->
+<!--ggresults works!-->
+<!--<br />-->
+<!--{{SimpleAnswers}}-->
+<!--<br />-->
+<!--{{UUID}}-->
+<!--<br />-->
+<!--{{products}}-->
+<!--</p>-->
+<div>
+    <ul class="list-group">
+        <li *ngFor="let o of products" class="list-group-item">{{o.id}}: {{o.text}} -- {{o.rating}} points</li>
 
-<ul class="list-group">
-    <li *ngFor="let o of products" class="list-group-item">{{o.id}}: {{o.text}} -- {{o.rating}} points</li>
-
-</ul>
+    </ul>
+</div>
