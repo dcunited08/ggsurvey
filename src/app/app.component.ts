@@ -16,7 +16,8 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class AppComponent {
     items: FirebaseListObservable<any[]>;
-    constructor(protected simpleAnswers: SimpleAnswersService,
+    constructor(
+        protected simpleAnswers: SimpleAnswersService,
                 af: AngularFire
     ) {
 

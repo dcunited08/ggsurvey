@@ -18,7 +18,7 @@ export class GgstartComponent implements OnInit {
     ngOnInit() {
         this.simpleAnswers.reset();
         console.log('fda');
-        this.router.navigate(['ggform']);
+        // this.router.navigate(['ggform']);
 
     }
 
