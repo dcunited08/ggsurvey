@@ -11,12 +11,11 @@ import {ProductsManagerService} from "../models/products-manager.service";
 export class GGResultsComponent implements OnInit {
 
     constructor(
-        protected productMgr: ProductsManagerService,
-        protected simpleAnswers: SimpleAnswersService) {
+                protected simpleAnswers: SimpleAnswersService) {
     }
 
     ngOnInit() {
-        this.determineProducts();
+
     }
 
     get SimpleAnswers() {
@@ -28,34 +27,9 @@ export class GGResultsComponent implements OnInit {
     }
 
     get products() {
-        return this.determineProducts();
+        return this.simpleAnswers.products;
     }
 
-    determineProducts() {
 
-        let p1 = _.mapValues(this.simpleAnswers.answers, 'product');
-        let p2 = _.groupBy(p1, 'id');
-        delete p2['undefined'];
-
-        let p3 = _.mapValues(p2, (p) => {
-            return _.sumBy(p, 'rating');
-        });
-
-        let products = this.productMgr.get();
-        products = _.map(products, (product) => {
-           if(p3[product.id]){
-               product['rating'] = p3[product.id];
-           }
-           return product;
-        });
-
-        products = _.filter(products, 'rating');
-        let products2 = _.groupBy(products, 'type');
-        let products3 = _.map(products2, (typeProducts) => {
-            return _.maxBy(typeProducts, 'rating');
-        });
-
-        return (products3.length)? products3 : [];
-    }
 
 }

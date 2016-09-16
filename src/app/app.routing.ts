@@ -9,14 +9,6 @@ import {ModuleWithProviders} from "@angular/core";
 import {GGResultsComponent} from "./ggresults/ggresults.component";
 
 
-// const appRoutes: Routes = [
-//   // { path: 'heroes', component: HeroFormComponent },
-//   { path: '', component: GgstartComponent },
-//   // { path: 'ggform', component: GGFormComponent },
-//   // { path: 'ggform/:id', component: GGFormComponent },
-//   // { path: '**', component: PageNotFoundComponent }
-// ];
-
 const appRoutes: Routes = [
     { path: 'hero', component: HeroFormComponent },
     { path: '', component: GgstartComponent },
