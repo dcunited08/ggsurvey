@@ -22,7 +22,10 @@ export class CookiesService {
             return cookie;
         });
 
-        return _.find(cookies, ['key', name]);
+        let cookie = _.find(cookies, ['key', name]);
+
+        console.log(cookie);
+        return cookie;
     }
 
     deleteCookie(name) {

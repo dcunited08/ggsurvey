@@ -18,7 +18,7 @@ export class SimpleAnswersService {
 
         let asdf = this.cookieMgr.getCookie(this.cookieName);
 
-        if (asdf.value.length > 0) {
+        if (!_.isUndefined(asdf)) {
             this._uuid = asdf.value;
             this.load();
         } else {
