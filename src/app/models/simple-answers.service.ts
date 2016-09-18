@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {CookiesService} from "./cookies.service";
 import {AngularFire} from "angularfire2";
 import {ProductsManagerService} from "./products-manager.service";
+import {ShopifyService} from "./shopify.service";
 
 @Injectable()
 export class SimpleAnswersService {
@@ -14,7 +15,8 @@ export class SimpleAnswersService {
 
     constructor(protected cookieMgr: CookiesService,
                 protected af: AngularFire,
-                protected productMgr: ProductsManagerService) {
+                protected productMgr: ProductsManagerService,
+                protected shopify: ShopifyService) {
 
         let asdf = this.cookieMgr.getCookie(this.cookieName);
 
@@ -49,7 +51,10 @@ export class SimpleAnswersService {
             .subscribe((asdf) => {
                 console.log(this.uuid, asdf);
                 this._answers = (asdf[this.uuid]) ? asdf[this.uuid] : {};
-                this._products = this.determineProducts(this.answers);
+                this.determineProducts(this.answers)
+                    .then((products) => {
+                        this._products = products;
+                    });
             });
 
     }
@@ -83,8 +88,8 @@ export class SimpleAnswersService {
     determineProducts(answers) {
 
         answers = _.values(answers);
-        answers = _.filter(answers, 'product');
-        let p1 = _.map(answers, 'product');
+        answers = _.filter(answers, 'products');
+        let p1 = _.flatten(_.map(answers, 'products'));
         console.log(p1);
 
         let p2 = _.groupBy(p1, 'id');
@@ -95,25 +100,43 @@ export class SimpleAnswersService {
         });
         console.log(p3);
 
-        let products = _.keyBy(this.productMgr.get(), 'id');
-        console.log(products);
-        for(let i in p3){
-            console.log(i, p3[i]);
-            products[i]['rating'] = p3[i];
-        }
+        return this.shopify.products
+            .then((products) => {
+                let products1 = _.keyBy(products, 'id');
+                console.log(products1);
+                for (let i in p3) {
+                    console.log(i, p3[i]);
+                    products1[i]['rating'] = p3[i];
+                }
 
-        let products2 = _.filter(products, 'rating');
-        let products3 = _.values(products2);
-        let products4 = _.groupBy(products3, 'type');
-        let products5 = _.map(products4, (typeProducts) => {
-            return _.maxBy(typeProducts, 'rating');
-        });
-        console.log(products2);
-        console.log(products3);
-        console.log(products4);
-        console.log(products5);
+                let products2 = _.filter(products1, 'rating');
+                let products3 = _.values(products2);
+                let products4 = _.groupBy(products3, 'attrs.product_type');
+                let products5 = _.map(products4, (typeProducts) => {
 
-        return (products5.length)? products5 : [];
+                    let product_type = _.get(typeProducts[0], 'attrs.product_type');
+
+                    console.log(product_type);
+
+                    if (product_type === '') {
+                        return typeProducts;
+                    } else {
+                        return _.maxBy(typeProducts, 'rating');
+                    }
+
+                });
+
+                products5 = _.flatten(products5);
+
+                console.log(products2);
+                console.log(products3);
+                console.log(products4);
+                console.log(products5);
+
+                return (products5.length) ? products5 : [];
+            });
+
+
     }
 
 

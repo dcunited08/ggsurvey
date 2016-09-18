@@ -12,34 +12,18 @@ export const QUESTIONS: Question[] = [
         options: [
             {
                 id: 501,
-                text: "Sandals",
-                product: {
-                    id: 1,
-                    rating: 2
-                }
+                text: "Sandals"
             },
             {
                 id: 502,
-                text: "Athletic",
-                product: {
-                    id: 2,
-                    rating: 2
-                }
+                text: "Athletic"
             },
             {id: 503, text: "Kids"},
             {
-                id: 504, text: "Casual",
-                product: {
-                    id: 3,
-                    rating: 2
-                }
+                id: 504, text: "Casual"
             },
             {
-                id: 505, text: "Work Shoes",
-                product: {
-                    id: 4,
-                    rating: 2
-                }
+                id: 505, text: "Work Shoes"
             },
             {
                 id: 506,
@@ -74,9 +58,29 @@ export const QUESTIONS: Question[] = [
         id: 3,
         text: 'What is your arch type from the I-Step Scan or picture on screen?',
         options: [
-            {id: 201, text: "High"},
-            {id: 202, text: "Medium"},
-            {id: 203, text: "Low"},
+            {   id: 201,
+                text: "High",
+                products: [
+                    {id: 7765481801, rating: 2},
+                    {id: 7793646089, rating: 2}
+                ]
+            },
+            {id: 202, text: "Medium",
+                products: [
+                    {id: 7794049033, rating: 2},
+                    {id: 7765334409, rating: 2},
+                    {id: 7765203593, rating: 2}
+                ]
+            },
+            {
+                id: 203,
+                text: "Low",
+                products: [
+                    {id: 7794049033, rating: 2},
+                    {id: 7765334409, rating: 2},
+                    {id: 7765203593, rating: 2}
+                ]
+            },
         ],
         nextQuestion: 5,
         type: Questiontypes.SingleSelect
@@ -142,32 +146,16 @@ export const QUESTIONS: Question[] = [
         id: 9, text: 'What type of socks do you like? (mark all that apply)',
         options: [
             {
-                id: 901, text: "Loose socks",
-                product: {
-                    id: 5,
-                    rating: 2
-                }
+                id: 901, text: "Loose socks"
             },
             {
-                id: 902, text: "Tight socks",
-                product: {
-                    id: 6,
-                    rating: 2
-                }
+                id: 902, text: "Tight socks"
             },
             {
-                id: 903, text: "Thick socks",
-                product: {
-                    id: 7,
-                    rating: 2
-                }
+                id: 903, text: "Thick socks"
             },
             {
-                id: 904, text: "Thin socks",
-                product: {
-                    id: 8,
-                    rating: 2
-                }
+                id: 904, text: "Thin socks"
             },
             {id: 905, text: "Low cut"},
             {id: 906, text: "High cut"}
@@ -179,26 +167,10 @@ export const QUESTIONS: Question[] = [
         id: 10,
         text: 'What are the top two types of shoes you wear most. Get the shoes that they came for and bring out the second type they wear most as well?',
         options: [
-            {id: 1001, text: "Athletic",
-                product: {
-                    id: 1,
-                    rating: 1
-                }},
-            {id: 1002, text: "Heels",
-                product: {
-                    id: 2,
-                    rating: 1
-                }},
-            {id: 1003, text: "Dress Casual",
-                product: {
-                    id: 3,
-                    rating: 1
-                }},
-            {id: 1004, text: "Flip-flops",
-                product: {
-                    id: 4,
-                    rating: 1
-                }},
+            {id: 1001, text: "Athletic"},
+            {id: 1002, text: "Heels"},
+            {id: 1003, text: "Dress Casual"},
+            {id: 1004, text: "Flip-flops"},
             {id: 1005, text: "Sandals"},
             {id: 1006, text: "Clogs"},
             {id: 1006, text: "Boots"}
