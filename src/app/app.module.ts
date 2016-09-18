@@ -15,9 +15,11 @@ import {SimpleAnswersService} from "./models/simple-answers.service";
 import {HeroFormComponent} from "./hero-form/hero-form.component";
 import {GGFormComponent} from "./ggform/ggform.component";
 import {QuestionsManagerService} from "./models/questions-manager.service";
-import { GGResultsComponent } from './ggresults/ggresults.component';
+import {GGResultsComponent} from './ggresults/ggresults.component';
 import {CookiesService} from "./models/cookies.service";
 import {ProductsManagerService} from "./models/products-manager.service";
+import { ShopifyComponent } from './shopify/shopify.component';
+import {ShopifyService} from "./models/shopify.service";
 
 // Must export the config
 export const firebaseConfig = {
@@ -33,7 +35,8 @@ export const firebaseConfig = {
         GgstartComponent,
         HeroFormComponent,
         GGFormComponent,
-        GGResultsComponent
+        GGResultsComponent,
+        ShopifyComponent
 
     ],
     imports: [
@@ -48,7 +51,8 @@ export const firebaseConfig = {
         appRoutingProviders,
         QuestionsManagerService,
         CookiesService,
-        ProductsManagerService
+        ProductsManagerService,
+        ShopifyService
     ],
     bootstrap: [AppComponent]
 })
